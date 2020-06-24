@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Questions to poll are</h1>
+    <h2> Click on the Question to check choices</h2>
+    {% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+            <li style="font-size: 20px;"><a href = {% url "polls:detail" question.id %} ><b> {{question.Question_text}}</b></a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> You dont have any questions.</p>
+{% endif %}
+
+</body>
+</html>
