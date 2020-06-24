@@ -1,22 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"></link>
 </head>
 <body>
-
+<div class="all">
     <h1>Questions to poll are</h1>
     <h2> Click on the Question to check choices</h2>
     {% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
-            <li style="font-size: 20px;"><a href = {% url "polls:detail" question.id %} ><b> {{question.Question_text}}</b></a></li>
+            <li><a href = {% url "polls:detail" question.id %} ><b> {{question.Question_text}}</b></a></li>
         {% endfor %}
     </ul>
 {% else %}
     <p> You dont have any questions.</p>
 {% endif %}
-
+</div>
 </body>
 </html>

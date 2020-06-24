@@ -1,0 +1,16 @@
+li a {
+    font-size: 30px;
+    color : pink;
+    margin-bottom: 10px;
+}
+
+body {
+    background: white url("images/background.jpg");
+    margin-left: 30rem;
+}
+
+.all {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

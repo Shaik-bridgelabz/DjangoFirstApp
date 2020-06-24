@@ -1,16 +1,14 @@
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"></link>
 </head>
-<style>
-    body {
-    font-size: 20px;
-    }
-</style>
 <body>
-
+<div class="all">
 <h1> {{question.Question_text}}</h1>
 
 {% if error_message %} <p><strong>{{error_message}}</strong></p>
@@ -23,5 +21,6 @@
 {% endfor %}
 <input type="submit" value="Vote">
 </form>
+</div>
 </body>
 </html>
